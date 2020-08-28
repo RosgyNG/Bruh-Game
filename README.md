@@ -1,2 +1,2 @@
-# bruh game
+# Bruh Game
  
