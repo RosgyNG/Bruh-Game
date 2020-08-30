@@ -40,7 +40,7 @@ def load_game():
         print("\n")
 
 
-# Konuşma Fonksiyonu ve konuşmanın kendisi
+        # Konuşma Fonksiyonu ve konuşmanın kendisi
         def start_talk():
             print("Bir ormanda uyandım")
             time.sleep(2)
@@ -54,11 +54,11 @@ def load_game():
             time.sleep(2)
             print("Yaklaştıktan sonra çok uzun yol olduğunu farkettim ve o yoldan gitmeye karar verdim")
             time.sleep(5)
-            print('Yürürken "Nasıl bir anda herşeyi unutup ormanda uyanabilirim ki?" diye düşünüyordum')
+            print('Yürürken "Nasıl bir anda herşeyi unutup ormanda uyanabilirim ki?" diye düşündüm')
             time.sleep(5)
             print("İsmimi bile hatırlamıyorum")
             time.sleep(2)
-            print("Bu resmen bir felaketti!")
+            print("Bu bir felaketti")
             time.sleep(2)
             print("Hiç şaşırmadım")
             time.sleep(2)
@@ -75,31 +75,57 @@ def load_game():
             print("Yürüdüm")
             time.sleep(5)
 
-            print("\nBirkaç saat sonra\n")
+            print("\n<<Birkaç saat sonra>>\n")
             time.sleep(5)
 
             print("Birini gördüm")
             time.sleep(2)
-            print("Yaklaştıktan sonra ihtiyar olduğunu farkettim")
+            print("Yaklaştıktan sonra bir ihtiyar olduğunu farkettim")
             time.sleep(3)
-            print("Benim ona yaklaştığımı gördü")
+            print("O da beni beni farketti")
             time.sleep(3)
 
-            isim = input("\nİhtiyar: Bu arada senin ismin nedir?\n")
+            print("İhtiyar: Hey, bana uzun süre baktığını farkettim. Sorun nedir?")
+            print("Ben: Ha, sorun yok. Sadece düşüncelerime daldım.")
+            isim = input("\nİhtiyar: Bu arada senin ismin nedir?\n")    #İsim sorma
             time.sleep(2)
             print("İhtiyar: Hmm.. " + isim + " ne kadar güzel bir isim!")
             time.sleep(2)
             print("İhtiyar: Bu arada, biz neden burada duruyoruz?\nBenim eve gidelim, intihar edecekmişsin gibi görünüyorsun.")
-            time.sleep(2)
+            time.sleep(4)
             print('"Eve gelirsiniz."\n' + isim + ": " + '"Ev çok ürkütücü gözüküyor."')
-            time.sleep(2)
+            time.sleep(3.5)
             print("Bu evdeyken dikkat etmeliyim")
+            time.sleep(2.5)
+            print("Birkaç dakika evde durduktan sonra biraz acıkmaya başladım")
+            time.sleep(3.5)
+            secenek1 = input("1) Acıktığını söyle \n2) Adamın ismini sor\n")
             time.sleep(2)
-            #secenek = input("1) Adamın ismini sor. \n")
-            #time.sleep(2)
+            if secenek1 == str(1):
+                print(isim + ": Şey.. ben biraz acıktım da... Yiyecek birşey var mı?")
+                time.sleep(3)
+                print("İhtiyar: Tabiki var, olmaz mı? İstediğini yiyebilirsin delikanlı")
+                time.sleep(3)
+            elif secenek1 == str(2):
+                print(isim + ": Şey.. sizin adınız nedir?")
+                time.sleep(2)
+                print("İhtiyar: Adım Hüseyin, ama bana kısaca Hüsük diye seslenebilirsin")
+                time.sleep(4)
+            else:
+                print("Var olmayan seçeneği seçtiniz")
+                time.sleep(3)
+                print("Oyun kapatılıyor...")
+                time.sleep(3)
+
+
+
+                print("ŞİMDİLİK BU KADAR DEVAMI YAKINDA GELİYOR")
+
 
 
             # SOHBETİN SONU
+
+
         start_talk()
 
 # Oyunu Başlatma
@@ -108,6 +134,6 @@ oyun_baslatma_kararı = input("Oyuna devam etmek için 'Enter'a bas\n")
 if oyun_baslatma_kararı == "":
     load_game()
 else:
-    print("Oyun kapatılacaktır") 
+    print("Oyun kapatılacaktır")
 
 # Oyun Bitişi
