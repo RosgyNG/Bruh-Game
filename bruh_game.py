@@ -1,5 +1,7 @@
 import time
 
+# -*- coding: UTF-8 -*-
+
 # Uygulamanın başlaması için gereken kodlar
 
 oyunAdi = "Bruh Game"
@@ -38,7 +40,6 @@ def load_game():
         print("Loading... " + loading_element)
         time.sleep(0.3)
         print("\n")
-
 
         # Konuşma Fonksiyonu ve konuşmanın kendisi
         def start_talk():
@@ -104,11 +105,12 @@ def load_game():
 
             print("İhtiyar: Hey, bana uzun süre baktığını farkettim. Sorun nedir?")
             print("Ben: Ha, sorun yok. Sadece düşüncelerime daldım.")
-            isim = input("\nİhtiyar: Bu arada senin ismin nedir?\n İsmim: ")    #İsim sorma
+            isim = input("\nİhtiyar: Bu arada senin ismin nedir?\n İsmim: ")  # İsim sorma
             time.sleep(2)
             print("İhtiyar: Hmm.. " + isim + " ne kadar güzel bir isim!")
             time.sleep(3)
-            print("İhtiyar: Bu arada, biz neden burada duruyoruz?\nBenim eve gidelim, intihar edecekmişsin gibi görünüyorsun.")
+            print(
+                "İhtiyar: Bu arada, biz neden burada duruyoruz?\nBenim eve gidelim, intihar edecekmişsin gibi görünüyorsun.")
             time.sleep(6)
             print('"Eve gelirsiniz."\n' + isim + ": " + '"Ev çok ürkütücü gözüküyor."')
             time.sleep(5)
@@ -116,7 +118,8 @@ def load_game():
             time.sleep(2)
             print("<<Birkaç dakika evde durduktan sonra biraz acıkmaya başladım>>")
             time.sleep(4)
-            secenek1 = input("1) Acıktığını söyle \n2) Adamın ismini sor\n(Seçmek için seçenek numarasını yazıp 'Enter'a tıkla)\n Seçenek ->  ")
+            secenek1 = input(
+                "1) Acıktığını söyle \n2) Adamın ismini sor\n(Seçmek için seçenek numarasını yazıp 'Enter'a tıkla)\n Seçenek ->  ")
             if secenek1 == str(1):
                 time.sleep(2)
                 print(isim + ": Şey.. ben biraz acıktım da... Yiyecek birşey var mı?")
@@ -134,21 +137,17 @@ def load_game():
                 print("Oyun kapatılıyor...")
                 time.sleep(3)
 
-
-
             print("<<OYUN MESAJI>>\nŞİMDİLİK BU KADAR DEVAMI YAKINDA GELİYOR")
-
-
 
             # SOHBETİN SONU
 
-
         start_talk()
+
 
 # Oyunu Başlatma
 
-oyun_baslatma_kararı = input("Oyuna devam etmek için 'Enter'a bas\n")
-if oyun_baslatma_kararı == "":
+oyun_baslatma_karari = input("Oyuna devam etmek için 'Enter'a bas\n")
+if oyun_baslatma_karari == "":
     load_game()
 else:
     print("Sadece 'Enter'a basmadığınız için oyun kapatılacaktır")
